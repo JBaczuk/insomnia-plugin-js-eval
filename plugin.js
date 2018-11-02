@@ -1,3 +1,5 @@
+const CryptoJs = require('crypto-js');
+
 module.exports.templateTags = [{
     name: 'jseval',
     displayName: 'JSEval',
@@ -9,6 +11,7 @@ module.exports.templateTags = [{
         placeholder: 'Your JS Code Here'
     }],
     run (context, js) {
+        console.log(context);
         try {
             r = eval(js);
         } catch (err) {
